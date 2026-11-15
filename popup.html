@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 13px system-ui, sans-serif; width: 380px; margin: 0; padding: 12px; }
+  h1 { font-size: 15px; margin: 0 0 8px; }
+  #list { max-height: 260px; overflow-y: auto; border: 1px solid #ddd; border-radius: 6px; }
+  label { display: flex; gap: 8px; align-items: center; padding: 6px 8px; border-bottom: 1px solid #eee; }
+  label:last-child { border-bottom: 0; }
+  label span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+  button { padding: 7px 12px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+  button:disabled { background: #9ca3af; cursor: default; }
+  #status { color: #555; margin-top: 8px; min-height: 16px; }
+  .muted { color: #777; padding: 10px; }
+</style>
+</head>
+<body>
+  <h1>Open PDF tabs</h1>
+  <div id="list"></div>
+  <div class="row">
+    <button id="go">Download ZIP</button>
+    <label style="border:0;padding:0"><input type="checkbox" id="all" checked> Select all</label>
+  </div>
+  <div id="status"></div>
+  <script src="zip.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
